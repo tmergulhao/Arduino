@@ -56,5 +56,5 @@ void fadeTo (int gaugerInput) {
     analogOutput++;
   }
 
-  analogWrite(outputPort, analogOutput * 255 / 1023);
+  analogWrite(outputPort, map(analogOutput, 0, 1023, 0, 255));
 }
